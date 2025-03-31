@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Creating social media app from scratch using flex and grid "
+    />
+    <meta name="author" content="Justin Pot" />
+    <meta name="keywords" content="social media, photos, post, profile" />
+    <title>Spots</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <img
+            src="./images/avatar.svg"
+            alt="User Profile Picture"
+            class="profile__avatar"
+          />
+          <div class="profile__column">
+            <h1 class="profile__name">Bessie Coleman</h1>
+            <p class="profile__description">Civil Aviator</p>
+            <button class="profile__edit_button">
+              <img
+                src="./images/edit_pencil.svg"
+                alt="Edit Pencil Icon"
+                class="profile__edit_icon"
+              />
+              Edit Profile
+            </button>
+          </div>
+          <button class="profile__add_button">
+            <img
+              src="./images/plus_sign.svg"
+              alt="Plus Sign"
+              class="profile__plus_icon"
+            />
+            New Post
+          </button>
+        </section>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>
