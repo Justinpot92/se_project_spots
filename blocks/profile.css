@@ -17,21 +17,35 @@
 
 .profile__name {
   margin: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
 }
 
 .profile__description {
   margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
 }
 
 .profile__edit_button {
   display: flex;
   margin-top: auto;
+  padding: 0;
   background: none;
   border: none;
   color: #212121;
   gap: 8px;
+  opacity: 70%;
+  font-weight: 500;
   font-size: 16px;
-  padding: 0;
+  line-height: 1;
+  transition: opacity 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+.profile__edit_button:hover {
+  opacity: 1;
 }
 
 .profile__edit_icon {
@@ -43,6 +57,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
   gap: 8px;
   background-color: #212121;
   color: #fcf5e5;
@@ -52,6 +67,13 @@
   margin-top: auto;
   margin-left: auto;
   font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.profile__add_button:hover {
+  opacity: 0.8;
 }
 
 .profile__plus_icon {
