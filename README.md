@@ -20,6 +20,7 @@ Spots is a simple social media web interface built using HTML and CSS, following
 **GitHub Pages**
 
 - [Link to the project on GitHub](https://justinpot92.github.io/se_project_spots/)
+- [Link to the recording of project](https://www.loom.com/share/e76d3dd6aa5145a9aa3e0edc63910dc5)
 
 **Figma**
 
