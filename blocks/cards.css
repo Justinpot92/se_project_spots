@@ -7,16 +7,20 @@
 
 .cards__list {
   list-style-type: none;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 406px);
+  grid-template-columns: repeat(auto-fit, 413px);
   gap: 20px;
   justify-content: center;
 }
 
 @media screen and (max-width: 627px) {
+  .cards {
+    padding-bottom: 40px 20px;
+  }
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);
+    gap: 20px;
   }
 }

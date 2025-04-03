@@ -26,9 +26,10 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+  color: #212121;
 }
 
-.card__like_button {
+.card__like-button {
   background-image: url(../images/like_button.svg);
   width: 23px;
   height: 20px;
@@ -37,9 +38,10 @@
   border: none;
   background-color: transparent;
   transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.card__like_button:hover {
+.card__like-button:hover {
   opacity: 1;
 }
 
@@ -56,9 +58,10 @@
   .card__title {
     font-size: 16px;
     max-width: 248px;
+    line-height: 1;
   }
 
-  .card__like_button {
+  .card__like-button {
     width: 20px;
     height: 18px;
     background-size: contain;

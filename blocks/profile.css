@@ -7,6 +7,9 @@
 
 .profile__avatar {
   margin-right: 20px;
+  width: 190px;
+  height: 190px;
+  border-radius: 8px;
 }
 
 .profile__column {
@@ -15,22 +18,34 @@
 }
 
 .profile__name {
-  margin: 0;
-  padding-bottom: 12px;
+  margin-bottom: 12px;
   font-weight: 500;
+  max-width: 420px;
   font-size: 32px;
   line-height: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__description {
   margin: 0;
   font-weight: 500;
+  max-width: 420px;
   font-size: 16px;
   line-height: 1;
+  color: #212121;
   opacity: 70%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
-.profile__edit_button {
+.profile__edit-button {
   display: flex;
   margin-top: auto;
   padding: 0;
@@ -42,24 +57,27 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
-  transition: opacity 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.profile__edit_button:hover {
+.profile__edit-button::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/edit_pencil.svg);
+}
+
+.profile__edit-button:hover {
   opacity: 1;
 }
 
-.profile__edit_icon {
-  height: 16px;
-  width: 18px;
-}
-
-.profile__add_button {
+.profile__add-button {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
   gap: 8px;
+  border: 0;
   background-color: #212121;
   color: #fcf5e5;
   min-width: 149px;
@@ -73,13 +91,15 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.profile__add_button:hover {
-  opacity: 0.8;
+.profile__add-button::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url(../images/plus_sign.svg);
 }
 
-.profile__plus_icon {
-  height: 12px;
-  width: 12px;
+.profile__add-button:hover {
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 627px) {
@@ -98,7 +118,7 @@
   }
 
   .profile__name {
-    padding-bottom: 6px;
+    margin-bottom: 6px;
     font-size: 20px;
   }
 
@@ -106,13 +126,12 @@
     align-items: center;
   }
 
-  .profile__edit_button {
+  .profile__edit-button {
     padding: 32px 0 20px;
   }
 
-  .profile__add_button {
+  .profile__add-button {
     margin: 0;
     width: 288px;
-    height: 52px;
   }
 }
