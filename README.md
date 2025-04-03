@@ -28,10 +28,6 @@ Spots is a simple social media web interface built using HTML and CSS, following
 
 **Images**
 
-##### Header
-
-![Profile](./images/Header.png)
-
 ##### Card Layout
 
 ![Cards](./images/Cards.png)
