@@ -39,6 +39,7 @@
   background-image: url(../images/close_btn_icon.png);
   border: none;
   opacity: 40%;
+  cursor: pointer;
 }
 
 .modal__title {
