@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: column;
   padding: 32px 50px;
+  box-sizing: border-box;
   margin: 0 10px 0;
   position: relative;
 }
@@ -39,7 +40,7 @@
   top: 32px;
   right: 50px;
   background: transparent;
-  background-image: url(../images/close_btn_icon.png);
+  background-image: url(../images/close_btn_icon.svg);
   border: none;
   opacity: 40%;
   cursor: pointer;
@@ -96,6 +97,7 @@
 .modal__save-btn {
   max-width: 156px;
   height: 52px;
+  border: 0;
   background-color: #212121;
   color: #fcf5e5;
   border-radius: 8px;
@@ -108,7 +110,7 @@
 
 @media screen and (max-width: 627px) {
   .modal__container {
-    padding: 12px;
+    padding: 22px 12px 12px;
   }
 
   .modal__close-btn {
@@ -118,7 +120,6 @@
 
   .modal__title {
     margin: 0 0 24px;
-    font-weight: 500;
     font-size: 20px;
   }
 
