@@ -9,10 +9,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__container {
@@ -100,6 +103,7 @@
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
