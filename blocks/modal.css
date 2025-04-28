@@ -42,8 +42,13 @@
   background: transparent;
   background-image: url(../images/close_btn_icon.svg);
   border: none;
-  opacity: 40%;
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.modal__close-btn:hover {
+  opacity: 1;
 }
 
 .modal__title {
@@ -83,6 +88,7 @@
   font-size: 20px;
   line-height: 1;
   letter-spacing: 0;
+  transition: opacity 0.3s ease-in-out;
   color: #212121;
 }
 
@@ -92,6 +98,11 @@
   font-size: 20px;
   line-height: 1;
   letter-spacing: 0;
+}
+
+.modal__input:hover {
+  border: 1px solid #212121;
+  opacity: 1;
 }
 
 .modal__save-btn {
@@ -105,7 +116,12 @@
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0;
+  transition: opacity 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.modal__save-btn:hover {
+  opacity: 80%;
 }
 
 @media screen and (max-width: 627px) {
