@@ -115,7 +115,11 @@ function handleNewPostSubmit(evt) {
 
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
+
   closeModal(newPostModal);
+
+  captionInput.value = "";
+  linkInput.value = "";
 }
 
 NewPostFormEl.addEventListener("submit", handleNewPostSubmit);
