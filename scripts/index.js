@@ -141,8 +141,7 @@ function handleNewPostSubmit(evt) {
 
   closeModal(newPostModal);
 
-  captionInput.value = "";
-  linkInput.value = "";
+  NewPostFormEl.reset();
 }
 
 NewPostFormEl.addEventListener("submit", handleNewPostSubmit);
