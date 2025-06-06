@@ -32,6 +32,7 @@ const initialCards = [
 const editProfileBtn = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
+const editProfileSaveBtn = editProfileModal.querySelector(".modal__save-btn");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDecriptionsEl = document.querySelector(".profile__description");
@@ -45,7 +46,8 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
 const newPostBtn = document.querySelector(".profile__add-button");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
-const NewPostFormEl = newPostModal.querySelector(".modal__form");
+const newPostSaveBtn = newPostModal.querySelector(".modal__save-btn");
+const newPostFormEl = newPostModal.querySelector(".modal__form");
 const linkInput = newPostModal.querySelector("#image-link-input");
 const captionInput = newPostModal.querySelector("#caption-input");
 
@@ -106,6 +108,10 @@ function closeModal(modal) {
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDecriptionsEl.textContent;
+  resetValidation(editProfileForm, [
+    editProfileNameInput,
+    editProfileDescriptionInput,
+  ]);
   openModal(editProfileModal);
 });
 editProfileCloseBtn.addEventListener("click", function () {
@@ -113,6 +119,7 @@ editProfileCloseBtn.addEventListener("click", function () {
 });
 
 newPostBtn.addEventListener("click", function () {
+  resetValidation(newPostFormEl, [linkInput, captionInput]);
   openModal(newPostModal);
 });
 newPostCloseBtn.addEventListener("click", function () {
@@ -123,6 +130,7 @@ function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDecriptionsEl.textContent = editProfileDescriptionInput.value;
+  disableButton(editProfileSaveBtn, config);
   closeModal(editProfileModal);
 }
 
@@ -138,13 +146,12 @@ function handleNewPostSubmit(evt) {
 
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-
   closeModal(newPostModal);
-
-  NewPostFormEl.reset();
+  disableButton(newPostSaveBtn, config);
+  newPostFormEl.reset();
 }
 
-NewPostFormEl.addEventListener("submit", handleNewPostSubmit);
+newPostFormEl.addEventListener("submit", handleNewPostSubmit);
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);

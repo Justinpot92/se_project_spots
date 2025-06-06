@@ -121,6 +121,10 @@
   opacity: 1;
 }
 
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
 .modal__error {
   display: block;
   margin-top: 8px;
@@ -141,6 +145,10 @@
   letter-spacing: 0;
   transition: opacity 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.modal__save-btn_error {
+  background-color: red;
 }
 
 .modal__save-btn:hover {
