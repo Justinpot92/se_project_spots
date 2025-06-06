@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-const showInputError = (formEl, inputEl, errorMsg) => {
-  const errorMsgId = inputEl.id + "-error";
-  const errorMsgEl = document.querySelector("#" + errorMsgId);
-  errorMsgEl.textContent = errorMsg;
-};
-
-const checkInputValidity = (formEl, inputEl) => {
-  console.log();
-  if (!inputEl.validity.valid) {
-    showInputError(formEl, inputEl, inputEl.validationMessage);
-  }
-};
-
-const setEventListeners = (formEl) => {
-  const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
-  const buttonElement = formEl.querySelector(".modal__save-btn");
-
-  // toggleButtonState(inputList, buttonElement);
-=======
 const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
@@ -80,30 +60,15 @@ const setEventListeners = (formEl, config) => {
   const buttonEl = formEl.querySelector(config.submitButtonSelector);
 
   toggleButtonState(inputList, buttonEl, config);
->>>>>>> sprint-6
 
   inputList.forEach((inputEl) => {
     inputEl.addEventListener("input", function () {
       checkInputValidity(formEl, inputEl);
-<<<<<<< HEAD
-      // toggleButtonState(inputList, buttonElement);
-=======
       toggleButtonState(inputList, buttonEl, config);
->>>>>>> sprint-6
     });
   });
 };
 
-<<<<<<< HEAD
-const enableValidation = () => {
-  const formList = Array.from(document.querySelectorAll(".modal__form"));
-  formList.forEach((formEl) => {
-    setEventListeners(formEl);
-  });
-};
-
-enableValidation();
-=======
 const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
   formList.forEach((formEl) => {
@@ -112,4 +77,3 @@ const enableValidation = (config) => {
 };
 
 enableValidation(config);
->>>>>>> sprint-6
