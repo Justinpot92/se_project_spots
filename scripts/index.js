@@ -99,11 +99,27 @@ previewModalCloseBtn.addEventListener("click", () => {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+
+  function handleOutsideClick(event) {
+    if (event.target === modal) {
+      closeModal(modal);
+      modal.removeEventListener("click", handleOutsideClick);
+    }
+  }
+
+  modal.addEventListener("click", handleOutsideClick);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) closeModal(openedModal);
+  }
+});
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
