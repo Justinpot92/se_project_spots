@@ -148,11 +148,12 @@
 }
 
 .modal__save-btn_error {
-  background-color: red;
+  background-color: #212121;
+  opacity: 0.8;
 }
 
 .modal__save-btn:hover {
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .modal__image-container {
