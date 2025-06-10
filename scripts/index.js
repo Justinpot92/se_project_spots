@@ -100,15 +100,6 @@ previewModalCloseBtn.addEventListener("click", () => {
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 
-  function handleOutsideClick(event) {
-    if (event.target === modal) {
-      closeModal(modal);
-      modal.removeEventListener("click", handleOutsideClick);
-    }
-  }
-
-  modal.addEventListener("click", handleOutsideClick);
-
   document.addEventListener('keydown', handleEscape);
 }
 
@@ -136,8 +127,16 @@ function handleEscape(evt) {
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDecriptionsEl.textContent;
+
+    resetValidation(
+    editProfileForm,
+    [editProfileNameInput, editProfileDescriptionInput],
+    config
+  );
+
   openModal(editProfileModal);
 });
+
 editProfileCloseBtn.addEventListener("click", function () {
   closeModal(editProfileModal);
 });
