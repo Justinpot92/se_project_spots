@@ -11,16 +11,19 @@
     <meta name="author" content="Justin Pot" />
     <meta name="keywords" content="social media, photos, post, profile" />
     <title>Spots</title>
-    <!-- Stylesheet and favicon -->
-    <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" />
   </head>
 
   <body>
     <div class="page">
       <!-- Header Section: Contains the logo -->
       <header class="header">
-        <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
+        <img
+          src="<%=require('./images/logo.svg')%>"
+          alt="Spot logo"
+          class="header__logo"
+        />
       </header>
 
       <!-- Main Content Section -->
@@ -28,7 +31,7 @@
         <!-- Profile Section: User info, edit and add post buttons -->
         <section class="profile page__section">
           <img
-            src="./images/avatar.jpg"
+            src="<%=require('./images/avatar.jpg')%>"
             alt="User Profile Picture"
             class="profile__avatar"
           />
@@ -154,8 +157,5 @@
         </div>
       </div>
     </div>
-
-    <!-- Main JavaScript file (handles modals, card generation, form validation) -->
-    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
