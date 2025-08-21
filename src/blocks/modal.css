@@ -1,4 +1,4 @@
-/* ----- MODAL OVERLAY ----- */
+/* ---------- Modal Base ---------- */
 .modal {
   visibility: hidden;
   background-color: #00000080;
@@ -24,7 +24,7 @@
   opacity: 1;
 }
 
-/* ----- MODAL BOX ----- */
+/* ---------- Container ---------- */
 .modal__container {
   max-width: 730px;
   width: 100%;
@@ -37,7 +37,7 @@
   position: relative;
 }
 
-/* ----- CLOSE BUTTON ----- */
+/* ---------- Close Button ---------- */
 .modal__close-btn {
   position: absolute;
   margin: 0;
@@ -70,7 +70,7 @@
   opacity: 0.4;
 }
 
-/* ----- TITLE ----- */
+/* ---------- Titles & Labels ---------- */
 .modal__title {
   margin: 0 0 32px;
   font-weight: 500;
@@ -79,19 +79,19 @@
   color: #212121;
 }
 
-/* ----- FORM ----- */
-.modal__form {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
 .modal__label {
   margin: 0 0 32px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.1;
   color: #212121b3;
+}
+
+/* ---------- Form Inputs ---------- */
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 .modal__input {
@@ -111,6 +111,9 @@
 
 .modal__input::placeholder {
   color: #2121214d;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
 }
 
 .modal__input:hover {
@@ -129,7 +132,7 @@
   opacity: 0.7;
 }
 
-/* ----- SAVE BUTTON ----- */
+/* ---------- Buttons ---------- */
 .modal__save-btn {
   max-width: 156px;
   height: 52px;
@@ -152,7 +155,7 @@
   opacity: 0.8;
 }
 
-/* ----- IMAGE PREVIEW ----- */
+/* ---------- Images ---------- */
 .modal__image-container {
   position: relative;
 }
@@ -179,50 +182,41 @@
   line-height: 1.2;
 }
 
-/* ----- RESPONSIVE ----- */
+/* ---------- Responsive ---------- */
 @media screen and (max-width: 627px) {
   .modal__container {
     padding: 22px 12px 12px;
   }
-}
-
-.modal__close-btn {
-  top: 12px;
-  right: 12px;
-}
-
-.modal__title {
-  margin: 0 0 24px;
-  font-size: 20px;
-}
-
-.modal__label {
-  margin: 0 0 24px;
-}
-
-.modal__input {
-  font-size: 16px;
-}
-
-.modal__input::placeholder {
-  font-size: 16px;
-}
-
-.modal__save-btn {
-  width: 100%;
-  max-width: none;
-}
-
-.modal__caption {
-  font-size: 16px;
-}
-
-.modal__close-btn_type_preview {
-  top: -48px;
-  right: 0;
-}
-
-.modal__image {
-  max-width: none;
-  max-height: none;
+  .modal__close-btn {
+    top: 12px;
+    right: 12px;
+  }
+  .modal__title {
+    margin: 0 0 24px;
+    font-size: 20px;
+  }
+  .modal__label {
+    margin: 0 0 24px;
+  }
+  .modal__input {
+    font-size: 16px;
+  }
+  .modal__input::placeholder {
+    font-size: 16px;
+  }
+  .modal__save-btn {
+    max-width: none;
+    width: 100%;
+  }
+  .modal__caption {
+    font-size: 16px;
+  }
+  .modal__close-btn_type_preview {
+    top: -48px;
+    right: 0;
+  }
+  .modal__image {
+    max-width: none;
+    max-height: none;
+  }
 }
