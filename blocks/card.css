@@ -1,3 +1,4 @@
+/* ----- CARD ----- */
 .card {
   max-width: 413px;
   display: flex;
@@ -6,6 +7,7 @@
   cursor: pointer;
 }
 
+/* ----- IMAGE ----- */
 .card__image {
   width: 413px;
   height: 413px;
@@ -14,6 +16,7 @@
   border-radius: 8px;
 }
 
+/* ----- CONTENT ----- */
 .card__content {
   display: flex;
   justify-content: space-between;
@@ -21,6 +24,7 @@
   margin-top: 12px;
 }
 
+/* Title */
 .card__title {
   margin: 0;
   padding: 0;
@@ -34,6 +38,7 @@
   color: #212121;
 }
 
+/* ----- LIKE BUTTON ----- */
 .card__like-button {
   background-image: url(../images/like_button.svg);
   width: 23px;
@@ -60,6 +65,7 @@
   opacity: 0.4;
 }
 
+/* ----- DELETE BUTTON ----- */
 .card__delete-button {
   background-image: url(../images/delete_button_default.svg);
   width: 32px;
@@ -77,6 +83,7 @@
   background-image: url(../images/delete_button_hover.svg);
 }
 
+/* ----- RESPONSIVE ----- */
 @media screen and (max-width: 627px) {
   .card {
     max-width: 288px;

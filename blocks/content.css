@@ -1,11 +1,13 @@
+/* ----- MAIN CONTENT ----- */
 .content {
   padding: 0 20px;
   max-width: 1280px;
   margin: 0 auto;
 }
 
+/* ----- RESPONSIVE ----- */
 @media screen and (max-width: 627px) {
-  .content{
+  .content {
     padding: 0 16px;
   }
 }

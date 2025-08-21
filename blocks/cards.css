@@ -1,12 +1,14 @@
+/* ----- CARDS CONTAINER ----- */
 .cards {
   padding-top: 20px;
-  margin: 0;
   padding-bottom: 40px;
+  margin: 0;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
+/* ----- CARDS LIST ----- */
 .cards__list {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
@@ -15,10 +17,12 @@
   justify-content: center;
 }
 
+/* ----- RESPONSIVE ----- */
 @media screen and (max-width: 627px) {
   .cards {
     padding-bottom: 20px;
   }
+
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);
   }

@@ -1,9 +1,11 @@
+/* ----- FOOTER ----- */
 .footer {
   display: flex;
   justify-content: center;
   padding: 60px 60px;
 }
 
+/* ----- FOOTER TEXT ----- */
 .footer__copyright {
   margin: 0;
   font-weight: 400;
