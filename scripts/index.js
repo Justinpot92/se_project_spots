@@ -107,7 +107,10 @@ previewModalCloseBtn.addEventListener("click", () => {
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 
-  document.addEventListener('keydown', handleEscape);
+  function handleOutsideClick(event) {
+    if (event.target === modal) {
+      closeModal(modal);
+      modal  document.addEventListener('keydown', handleEscape);
 }
 
 const modals = document.querySelectorAll(".modal");
@@ -149,13 +152,7 @@ editProfileCloseBtn.addEventListener("click", function () {
 });
 
 newPostBtn.addEventListener("click", function () {
-  openModal(newPostModal);
-});
-newPostCloseBtn.addEventListener("click", function () {
-  closeModal(newPostModal);
-});
-
-function handleEditProfileSubmit(evt) {
+eSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDecriptionsEl.textContent = editProfileDescriptionInput.value;
